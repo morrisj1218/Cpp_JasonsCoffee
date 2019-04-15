@@ -37,10 +37,11 @@ int main()
 				totalCups_Sold(sm_Sold, md_Sold, lg_Sold);
 				break;
 			case 3: // Get daily total ounces of coffee sold
-				get_TotalOunces_Sold(sm_Sold, md_Sold, lg_Sold);
+				cout << "  Total ounces of coffee sold today... " << get_TotalOunces_Sold(sm_Sold, md_Sold, lg_Sold)
+					<< "oz." << endl;
 				break;
 			case 4: // Get daily sales totals
-				get_TotalSales(sm_Sold, md_Sold, lg_Sold);
+				cout << "  Total sales today... $" << get_TotalSales(sm_Sold, md_Sold, lg_Sold) << endl;
 				break;
 			case 5: // Help page
 				help();
@@ -171,7 +172,7 @@ double get_TotalSales(int sm, int md, int lg)
 	double sm_Price = 1.75, md_Price = 1.90, lg_Price = 2.00;
 	double totalSales;
 
-	totalSales = (sm * sm_Price) + (md * md_Price) + (lg_Price);
+	totalSales = (sm * sm_Price) + (md * md_Price) + (lg * lg_Price);
 	return totalSales;
 
 } // End of totalSales()
